@@ -2382,6 +2382,22 @@ public class Player extends LivingEntity implements CommandSender, Localizable, 
         return this;
     }
 
+    public boolean isCreative() {
+        return getGameMode() == GameMode.CREATIVE;
+    }
+
+    public boolean isSurvival() {
+        return getGameMode() == GameMode.SURVIVAL;
+    }
+
+    public boolean isAdventure() {
+        return getGameMode() == GameMode.ADVENTURE;
+    }
+
+    public boolean isSpectator() {
+        return getGameMode() == GameMode.SPECTATOR;
+    }
+
     protected void sendChunkUpdates(Chunk newChunk) {
         if (chunkUpdateLimitChecker.addToHistory(newChunk)) {
             final int newX = newChunk.getChunkX();

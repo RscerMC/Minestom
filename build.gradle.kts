@@ -78,6 +78,8 @@ dependencies {
     api(libs.gson)
     implementation(libs.jcTools)
 
+    implementation("net.kyori:adventure-text-minimessage:4.17.0")
+
     // Testing
     testImplementation(libs.bundles.junit)
     testImplementation(project(":testing"))
